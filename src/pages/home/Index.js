@@ -1,4 +1,4 @@
- import notif from "./alert.js"
+import notif from "./alert.js"
 import gif from "../../data/data"
 import Title from "../../gif/title/title"
 import Gif from "../../gif/gif/index"
@@ -12,7 +12,7 @@ import Gif from "../../gif/gif/index"
         <button onClick={notif} type="button">Select</button>
         </form>
         <Title title={gif.title} />  
-        <Gif gif={gif.gif} />
+        <Gif url={gif.url} />
       </div>
     );
   };
