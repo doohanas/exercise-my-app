@@ -25,7 +25,7 @@ function App() {
       <div className="App">
         <Title/>
         <input value={searchValue} onChange={handleSearchInputChanges} type="text"/>
-        <button onClick={getText}> search </button>
+        <button className="btn bg-dark" onClick={getText}> search </button>
         { result.map(gif => ( <Gif key={gif.id} url={gif.images.original.url} title={gif.title}/> ))}
       </div>
       </>
