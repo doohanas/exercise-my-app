@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import Title from "./components/title/title";
 import Gif from "./components/gif/index";
 import axios from "axios";
 import "./App.css";
@@ -7,11 +6,12 @@ import "./App.css";
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [result, setResult] = useState([]);
+  const React_API = process.env.REACT_APP_API_KEY;
 
   const getText = () => {
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIPHY_KEY}&q=${searchValue}&limit=12`
+        `https://api.giphy.com/v1/gifs/search?api_key=${React_API}&q=${searchValue}&limit=12`
       )
       .then((response) => {
         console.log(response);
@@ -26,7 +26,6 @@ function App() {
   return (
     <>
       <div className="App">
-        {/* <Title title={gif.title} /> */}
         <input
           data-testid="input"
           value={searchValue}
