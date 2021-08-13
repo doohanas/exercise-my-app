@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Title from "./components/title/title";
+// import Title from "./components/title/title";
 import Gif from "./components/gif/index";
 import axios from "axios";
 import "./App.css";
@@ -26,13 +26,14 @@ function App() {
   return (
     <>
       <div className="App">
-        <Title />
+        {/* <Title title={gif.title} /> */}
         <input
+          data-testid="input"
           value={searchValue}
           onChange={handleSearchInputChanges}
           type="text"
         />
-        <button onClick={getText}> search </button>
+        <button data-testid="buttonSearch" onClick={getText}> search </button>
         {result.map((gif) => (
           <Gif key={gif.id} url={gif.images.original.url} title={gif.title} />
         ))}

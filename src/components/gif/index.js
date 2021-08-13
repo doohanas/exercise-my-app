@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 
 const Gif = ({url, title}) => {
     return (
-        <div>
-             <img src={url} alt={title}></img>
-        </div>
-    )
+      <div>
+        <img src={url} alt="pictures"></img>
+        <p>{title}</p>
+      </div>
+    );
 };
 
 Gif.propTypes = {
